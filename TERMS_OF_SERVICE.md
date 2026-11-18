@@ -100,6 +100,7 @@ Users must not use, attempt to use, or knowingly permit others to use the Servic
 17. **Malicious content:** Distributing malware, conducting phishing attacks, facilitating credential theft, or operating services intended to compromise systems without authorisation.
 18. **Unauthorised registration changes:** Modifying, hijacking, or attempting to interfere with another User's Subdomain or registration without authorisation.
 19. **Circumvention:** Deliberately attempting to bypass registration restrictions, security controls, enforcement actions, or these Terms.
+20. **Domain Hogging:** Users are permitted up to *1* single-letter subdomain. No more.
 
 This list is not exhaustive. Other activities presenting a material risk of abuse, security compromise, or legal liability may require intervention.
 
