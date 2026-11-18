@@ -288,8 +288,8 @@ For questions, concerns, abuse reports, appeals, or other enquiries:
 
 **Website:** https://meowed-at.me
 
-**Documentation:** https://docs.meowed-at.me/
+**Documentation:** https://docs.free-names.org/
 
-**GitHub:** https://github.com/meowed-at-me
+**GitHub:** https://github.com/free-names
 
 **Discord:** https://discord.gg/KFEN5E3PyR

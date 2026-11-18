@@ -10,12 +10,12 @@
 > We do not support Vercel at the moment since we are not on the PSL.
 
 ## Issues
-If you have any problems, feel free to [open an issue](https://github.com/meowed-at-me/register/issues/new/choose).
+If you have any problems, feel free to [open an issue](https://github.com/free-names/meowed-at.me/issues/new/choose).
 
-Please follow our ToS, which can be found [here](https://meowed-at.me/terms)
+Please follow our ToS, which can be found [here](https://free-names.org/terms)
 
 ## Register
-1. Fork [the repository](https://github.com/meowed-at-me/register/fork).
+1. Fork [the repository](https://github.com/free-names/meowed-at.me/fork).
 2. Make a json file in the `domains` directory, for example `example.json`.
 3. Add the following file format to the json you just made:
 ```json
@@ -60,7 +60,7 @@ Please follow our ToS, which can be found [here](https://meowed-at.me/terms)
 > If your DNS has not propagated within 48 hours, please check with a [DNS Checker](https://dnschecker.org/all-dns-records-of-domain.php) before contacting us, so we can get you the best support.
 
 ## Documentation
-Our documentation is available [here](https://docs.meowed-at.me)!
+Our documentation is available [here](https://docs.free-names.org)!
 
 ### Similar Services
-If you want to find services that are similar to meowed-at.me, please check out [is-a.stupid.cat](https://github.com/is-a-stupid-cat/register), [has-a.space](https://github.com/has-a-space/register), [is-a.bot](https://github.com/free-domains/is-a.bot), [is-a.dev](https://github.com/is-a-dev/register) and any other subdomain provider available to the world.
+If you want to find services that are similar to meowed-at.me, please check out [is-a.stupid.cat](https://github.com/free-names/is-a.stupid.cat), [has-a.space](https://github.com/free-names/has-a.space), [is-a.bot](https://github.com/free-domains/is-a.bot), [is-a.dev](https://github.com/is-a-dev/register) and any other subdomain provider available to the world.

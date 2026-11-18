@@ -74,7 +74,7 @@ t("Users are limited to one single character subdomain", (t) => {
         const subdomain = file.replace(/\.json$/, "");
         const data = getDomainData(subdomain);
 
-        if (subdomain.length === 1 && data.owner.username.toLowerCase() !== "meowed-at-me") {
+        if (subdomain.length === 1 && data.owner.username.toLowerCase() !== "free-names") {
             results.push({
                 subdomain,
                 owner: data.owner.username.toLowerCase()

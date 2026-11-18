@@ -34,7 +34,17 @@ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const hostnameRegex = /^(?=.{1,253}$)(?:(?:[_a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)\.)+[a-zA-Z]{2,63}$/;
 
 const domainsPath = path.resolve("domains");
-const files = fs.readdirSync(domainsPath);
+// Dotfiles such as .gitkeep only keep an empty domains/ folder in git
+const files = fs.readdirSync(domainsPath).filter((file) => !file.startsWith("."));
+
+// Reserved names belong to the project, so its own files may use them
+function isProjectOwned(file) {
+    try {
+        return fs.readJsonSync(path.join(domainsPath, file)).owner.username.toLowerCase() === "free-names";
+    } catch {
+        return false;
+    }
+}
 
 function findDuplicateKeys(jsonString) {
     const duplicateKeys = new Set();
@@ -104,8 +114,10 @@ async function validateFileName(t, file) {
         hostnameRegex,
         `${file}: FQDN must be 1-253 characters, can use letters, numbers, dots, and non-consecutive hyphens.`
     );
-    t.false(reservedDomains.includes(subdomain), `${file}: Subdomain name is reserved`);
-    t.true(!reservedDomains.some((r) => subdomain.endsWith(`.${r}`)), `${file}: Subdomain name is reserved`);
+    if (!isProjectOwned(file)) {
+        t.false(reservedDomains.includes(subdomain), `${file}: Subdomain name is reserved`);
+        t.true(!reservedDomains.some((r) => subdomain.endsWith(`.${r}`)), `${file}: Subdomain name is reserved`);
+    }
 
     const rootSubdomain = subdomain.split(".").pop();
     t.false(rootSubdomain.startsWith("_"), `${file}: Root subdomains should not start with an underscore`);

@@ -73,7 +73,10 @@ for (var idx in domains) {
     throw "Invalid domain file name: " + name;
   }
 
-  if (reservedNames.indexOf(name.split('.').pop()) !== -1) {
+  // Reserved names belong to the project; the PR tests stop anyone else claiming free-names
+  var isProjectOwned = domainData.owner && String(domainData.owner.username).toLowerCase() === 'free-names';
+
+  if (!isProjectOwned && reservedNames.indexOf(name.split('.').pop()) !== -1) {
     throw "Reserved domain name: " + name;
   }
 

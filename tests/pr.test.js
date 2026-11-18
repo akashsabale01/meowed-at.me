@@ -39,7 +39,7 @@ t("Users can only update their own subdomains", (t) => {
             const subdomain = file.replace(/\.json$/, "");
             const data = getDomainData(subdomain);
 
-            if (data.owner.username === "meowed-at-me") {
+            if (data.owner.username.toLowerCase() === "free-names") {
                 t.true(
                     admins.includes(prAuthorId),
                     `${subdomain}: ${prAuthor} is not authorized to update ${subdomain}.meowed-at.me`
@@ -63,7 +63,7 @@ t("Users can only update their own subdomains", (t) => {
                     .join("\n")
             );
 
-            if (data.owner.username === "meowed-at-me") {
+            if (data.owner.username.toLowerCase() === "free-names") {
                 t.true(
                     admins.includes(prAuthorId),
                     `${subdomain}: ${prAuthor} is not authorized to delete ${subdomain}.meowed-at.me`
