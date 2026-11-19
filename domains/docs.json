@@ -1,9 +1,0 @@
-{
-    "owner": {
-        "username": "free-names",
-        "email": "admin@meowed-at.me"
-    },
-    "records": {
-        "CNAME": "free-names.github.io"
-    }
-}
